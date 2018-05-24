@@ -1,0 +1,272 @@
+@charset "UTF-8";
+$yahei: "Microsoft YaHei";
+$pingfan:PingFangSC-Regular;
+
+/*通用变量*/
+
+$baseFontSize:14px;
+$baseFontColor:#999;
+$mainColor: #35ffd5;
+
+/*基础样式*/
+
+@import "base/base";
+@import "base/mixins";
+// @import "base/mMixins";
+// @import "module/swiper.min.css";
+html {
+    height: 100%; // overflow-y: scroll;
+    font: 14px/1.5 PingFang sc, $yahei, "Helvetica Neue", Helvetica, Tahoma, Arial, SimSun, TW-Sung, "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", serif; // font-family: $yahei;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    p,
+    a,
+    span,
+    em,
+    i,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+a {
+    text-decoration: none;
+    &.g-link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+// ------------------------分割线--------------------------------
+// 整个头部的盒子
+.head {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ededed;
+}
+
+// 整个导航栏
+.navigation {
+    margin: 0px auto;
+    width: 62.5%;
+    @include clearfix;
+}
+
+// 导航栏logo
+.logo {
+    margin: 0px;
+    float: left;
+}
+
+.logo img {
+    width: 230px;
+    height: 100%;
+}
+
+// 导航栏
+.headline {
+    margin-left: 20px;
+    float: left;
+}
+
+ul, li {
+	list-style: none;
+}
+
+// 导航栏的设置：
+.headline li {
+    margin-left: 40px;
+    // display: inline;
+    float: left;
+    font-size: 16px;
+    color: #2b2424;
+    line-height: 80px;
+}
+
+.linelist a:hover {
+    color: red;
+}
+
+.headline a:visited {
+    color: #2b2424;
+}
+
+li.active {
+    font-weight: bold;
+    border-bottom: 3px solid #ce3f2a;
+}
+
+// 轮播图设置
+.slider-container {
+    width: 62.5%;
+    height: 240px;
+    margin: 0px auto;
+    position: relative;
+}
+
+// .slider {
+//     position: absolute;
+//     width: 500%;
+//     height: 100%;
+//     // height: 400px;
+// }
+
+.slider-item + .slider-item {
+	opacity: 0;
+}
+
+// 重点来了
+.slider-item {
+    width: 100%;
+    position: absolute;
+    animation-timing-function: linear;
+	animation-name: fade;
+	animation-iteration-count: infinite;
+    background-size: 100%;
+    height: auto;
+}
+
+// 设置背景图片
+.slider-item1 {
+	background-image: url(imgs/1.jpg);
+}
+.slider-item2 {
+	background-image: url(imgs/2.jpg);
+}
+.slider-item3 {
+	background-image: url(imgs/3.jpg);
+}
+.slider-item4 {
+	background-image: url(imgs/4.jpg);
+}
+.slider-item5 {
+	background-image: url(imgs/5.jpg);
+}
+
+// 设置淡入淡出
+@keyframes fade {
+    0% {
+        opacity: 0;
+        z-index: 2;
+    }
+    5% {
+        opacity: 1;
+        z-index: 1;
+    }
+    20% {
+        opacity: 1;
+        z-index: 1;
+    }
+    25% {
+        opacity: 0;
+        z-index: 0;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+// delay
+.slider-item,
+.focus-item {
+    animation-duration: 20s;
+}
+
+.slider-item1 {
+    animation-delay: -1s;
+}
+
+.slider-item2 {
+    animation-delay: 3s;
+}
+
+.slider-item3 {
+    animation-delay: 7s;
+}
+
+.slider-item4 {
+    animation-delay: 11s;
+}
+
+.slider-item5 {
+    animation-delay: 15s;
+}
+
+// 轮播焦点
+.focus-container {
+    position: absolute;
+    bottom: 2%;
+    z-index: 7;
+    margin: 0 auto;
+}
+
+.focus-container ul {
+    margin-left: 46%;
+}
+
+.focus-container li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    background: #fff;
+}
+
+.focus-item {
+    width: 100%;
+    height: 100%;
+    background: #55B1D9;
+    border-radius: inherit;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+}
+
+// 设置焦点 dalay
+.focus-item1 {
+    animation-delay: -1s;
+}
+
+.focus-item2 {
+    animation-delay: 3s;
+}
+
+.focus-item3 {
+    animation-delay: 7s;
+}
+
+.focus-item4 {
+    animation-delay: 11s;
+}
+
+.focus-item5 {
+    animation-delay: 15s;
+}
+
+.focus {
+    @include clearfix;
+}

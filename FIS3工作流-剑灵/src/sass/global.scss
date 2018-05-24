@@ -1,0 +1,90 @@
+@charset "UTF-8";
+$yahei: "Microsoft YaHei";
+$pingfan:PingFangSC-Regular;
+
+/*通用变量*/
+
+$baseFontSize:14px;
+$baseFontColor:#999;
+$mainColor: #35ffd5;
+/*基础样式*/
+
+@import "base/base";
+@import "base/mixins";
+@import "base/mMixins";
+
+// @import "module/swiper.min.css";
+
+html {
+    height: 100%; // overflow-y: scroll;
+    font: 14px/1.5 PingFang sc,$yahei, "Helvetica Neue", Helvetica, Tahoma, Arial, SimSun, TW-Sung, "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", serif; // font-family: $yahei;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    p,
+    a,
+    span,
+    em,
+    i,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+
+
+
+a {
+    text-decoration: none;
+    &.g-link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.hide {
+    display: none;
+}
+
+/* -----------------分割线----------------- */
+.head{
+    background-image: url(img/headbackground.png);
+    width:100%;
+    height: 100%;
+}
+.nav{
+    width:160px;/* 导航栏的宽 */
+    height:auto;/* 导航栏的高度，之后应该是需要修改的 */
+    position: fixed;/*  设置了这个导航栏才能跟随窗口的移动而移动啊 */
+    left: 0;/* 距离左边的距离 */
+    top: 50%;/* 这个是为了和下面的margin-top配合形成垂直居中 */
+    margin-top: 1px;/* 暂时设置一个 */
+    font-family: 'Miscrosoft Yahei';/* 字体的类型 */
+}
+.nav-li{
+    width:160px;/* 设置成和父元素一样的 */
+    height:50px;/* 每一个框框的大小 */
+    border-bottom: 1px solid #fff;/* 栏框的下边框，用来装饰 */
+    background-color:#333;/* 背景颜色 */
+    text-align: center;/* 是的li里的文字水平居中 */
+    line-height:50px;/* 这里设置的和框框的高度一样，为了是的文字垂直居中 */
+    color:#fff;/* 文字颜色 */
+    font-size: 16px;/* 文字大小 */
+}
