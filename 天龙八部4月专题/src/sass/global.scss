@@ -21,7 +21,9 @@ html {
 }
 
 body {
-    background: url('/src/img/bg.jpg') center 1168px no-repeat;
+    background-color: #b4e4f8;
+    // background: url('/src/img/bg.jpg') center 1168px no-repeat;
+    /* 这个是天龙八部的背景图 */
     a {
         text-decoration: none;
         &:hover {
@@ -45,11 +47,13 @@ body {
 }
 
 .g-zt-inner {
+    /* 这是是用来居中的，放在一个盒子里面，让盒子里面的元素全都居中 */
     width: 1200px;
     margin: 0 auto;
 }
 
 .mod-hd{
+    /* hd?what is hd mean? 从属性上看是设置里面行元素居中，文字颜色行高等一些通用属性*/
     text-align: center;
     color: #2e5c56;
     p{
@@ -64,7 +68,7 @@ body {
     font-weight: normal;
     @for $i from 1 through 6{
         &.mod-title#{$i} {
-            background: url(/src/img/part#{$i}_title.png) no-repeat center top;
+            background: url(/src/img/test/part#{$i}_title.png) no-repeat center top;
         }
     }
 }
@@ -178,8 +182,8 @@ body {
 .page-index {
     position: relative;
     font-family: "微软雅黑";
-    padding-top: 955px;
-    background: url('/src/img/bg-1.jpg') top center no-repeat;
+    padding-top: 1060px;
+    background: url('/src/img/test/bg-1.jpg') top center no-repeat;
     @media screen and (max-width: 1024px) {
         width: 1180px;
         margin: 0 auto;
@@ -283,7 +287,7 @@ body {
     }
     .mod-lottery {
         margin-top: 130px;
-        // background: url(/src/img/bg-lottery.jpg) no-repeat;
+        background: url(/src/img/test/bg-2.jpg)center 0 no-repeat;
         position: relative;
         text-align: center;
         .g-zt-inner{
@@ -666,6 +670,7 @@ body {
         }
     }
     .mod-preview{
+        background: url(/src/img/test/bg-3.jpg) center bottom no-repeat;
         .mod-bd{
             padding: 70px 0 140px;
         }
