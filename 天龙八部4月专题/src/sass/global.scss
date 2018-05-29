@@ -21,9 +21,10 @@ html {
 }
 
 body {
-    background-color: #b4e4f8;
+   /*  background-color: #b3e3f8; */
     // background: url('/src/img/bg.jpg') center 1168px no-repeat;
-    /* 这个是天龙八部的背景图 */
+    /* 这个是天龙八部的背景图,页面中部到底部的背景图 */
+    background: url('/src/img/test/bg-2.jpg') center 1191px no-repeat;
     a {
         text-decoration: none;
         &:hover {
@@ -46,14 +47,17 @@ body {
     }
 }
 
+// 通用代码
 .g-zt-inner {
     /* 这是是用来居中的，放在一个盒子里面，让盒子里面的元素全都居中 */
+    /* 就是位置罩 */
     width: 1200px;
     margin: 0 auto;
 }
 
 .mod-hd{
     /* hd?what is hd mean? 从属性上看是设置里面行元素居中，文字颜色行高等一些通用属性*/
+    /* 就是内容罩 */
     text-align: center;
     color: #2e5c56;
     p{
@@ -179,10 +183,11 @@ body {
     }
 }
 
+
 .page-index {
     position: relative;
     font-family: "微软雅黑";
-    padding-top: 1060px;
+    padding-top: 1065px;
     background: url('/src/img/test/bg-1.jpg') top center no-repeat;
     @media screen and (max-width: 1024px) {
         width: 1180px;
@@ -286,8 +291,9 @@ body {
         }
     }
     .mod-lottery {
-        margin-top: 130px;
-        background: url(/src/img/test/bg-2.jpg)center 0 no-repeat;
+        margin-top: 110px;
+        // background: url(/src/img/test/bg-2.jpg)center 100px no-repeat;
+        /* 抽奖区域的背景图，我特么不放这儿了 */
         position: relative;
         text-align: center;
         .g-zt-inner{
@@ -300,7 +306,7 @@ body {
             margin: 10px auto 0;
         }
         .lottery-cot {
-            margin: 100px auto 0 auto;
+            margin: 50px auto 0 auto;
             font-size: 0;
             position: relative;
             height: 408px;
@@ -416,6 +422,9 @@ body {
                 color: #333333;
                 text-align: center;
                 text-shadow: -0.06em -0.06em 0 #fff, 0.06em -0.06em 0 #fff, -0.06em 0.06em 0 #fff, 0.06em 0.06em 0 #fff;
+                /* 这里四个方向都给了阴影，不就是像有一个地罩住了吗？ */
+                /* 这儿有个问题，就是我设置成text-shadow:0 0 1px #FFF 不就是实现了地罩住的霓虹灯效果吗？ */
+                /* 刚刚实际测试了一下，效果还是有很大差别的，用这个四个方向都加阴影的方式，整个字仿佛加了一个白圈，在黑色的背景下都突出来了，但是单单用阴影的方法不行 */
             }
         }
         .lottery-tip {
@@ -630,11 +639,11 @@ body {
         }
     }
     .mod-video {
-        padding: 190px 0 100px 0;
+        padding: 115px 0 100px 0;
         // background: url(/src/img/bg-video.jpg) no-repeat;
         .mod-bd {
             width: 938px;
-            margin: 70px auto 0;
+            margin: 65px auto 0;
             position: relative;
             .video-cover {
                 position: relative;
@@ -642,12 +651,14 @@ body {
                 height: 528px;
                 .icon-play {
                     position: absolute;
+                    /* 以下六行是居中操作 */
                     top: 50%;
                     left: 50%;
                     margin-top: -40px;
                     margin-left: -40px;
                     width: 80px;
                     height: 80px;
+                    /* 变成小手，提示可以点击 */
                     cursor: pointer;
                     background: url(/src/img/icon-play.png?__sprite) no-repeat;
                 }
@@ -670,9 +681,10 @@ body {
         }
     }
     .mod-preview{
-        background: url(/src/img/test/bg-3.jpg) center bottom no-repeat;
+        // background: url(/src/img/test/bg-3.jpg) center bottom no-repeat;
+        /* 本来有图，现在不用啦 */
         .mod-bd{
-            padding: 70px 0 140px;
+            padding: 70px 0 230px;
         }
         .preview-wrap{
             img{
