@@ -1,0 +1,10 @@
+{
+  "name": "sa",
+  "version": "1.0.0",
+  "description": "FED Workflow",
+  "main": "index.js",
+  "scripts": {
+    "debug": "fis3 server restart && fis3 release dev -w ",
+    "build": "fis3 release prod -d ../../../pub/zt2017/mhssj/"
+  }
+}

@@ -1,0 +1,21 @@
+<div class="lottery-tip-wrap">
+    <% if(gold == 0){ %>
+    <h3 class="tip-title">很遗憾，本次没有中奖。</h3>
+    <% }else if(gold == -10086){ %>
+    <h3 class="tip-title">您已经没有抽奖次数，请领取礼包后再来抽奖</h3>
+    <%}else{ %>
+    <h3 class="tip-title">恭喜您！抽中<em><%= reward %></em></h3>
+        <a href="http://ka.duowan.com/user/golds" target="_blank" class="bind-btn">
+        查看中奖纪录明细>>
+        </a>
+   <% } %>
+
+    <% if(count > 0){ %>
+    <p class="has-count">本页面还有
+        <%= count %>个礼包待领取，领取后可获得
+            <%= count %>次抽奖机会</p>
+    <% } %>
+    <div class="lottery-tips">
+        <button i="close" class="comfirm-btn">确定</button>
+    </div>
+</div>

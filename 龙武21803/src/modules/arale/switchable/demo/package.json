@@ -1,0 +1,37 @@
+{
+  "family": "",
+  "name": "switchable",
+  "version": "1.0.0",
+  "description": "The best project ever.",
+  "homepage": "https://github.com/Administrator/demo",
+  "author": "LiuDawei",
+  "maintainers": [
+    "LiuDawei"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Administrator/demo.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": [],
+  "licenses": "MIT",
+  "spm": {
+      "ftp": {
+          "host": "172.19.103.15",
+          "port": 21,
+          "authKey": "publisher",
+          "dest": "/lego/2.1.0/demo/switchable",
+          "src": "_site/",
+          "exclusions": ["package.json", ".gitignore", ".DS_Store", ".svn", "bak", ".ftppass"]
+      },
+    "output": [
+      "switchable.js",
+      "switchable.css"
+    ],
+    "alias": {},
+    "devAlias": {},
+    "engines": {}
+  }
+}

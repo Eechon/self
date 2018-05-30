@@ -1,0 +1,138 @@
+@charset "utf-8";
+/*
+ * @file: 重置样式
+ * @update: 2015-06-03 17:28:19
+ */
+
+body {
+    // font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $base-text-color;
+    background-color: $base-bg-color;
+}
+a {
+    text-decoration: none;
+    color: nth($base-link-color, 1);
+    &:hover {
+        text-decoration: $base-link-decoration;
+        color: nth($base-link-color, 2);
+    }
+}
+
+/* 去除现代浏览器图片底部的空隙 */
+img {
+    vertical-align: top;
+}
+em {
+    font-style: normal;
+}
+ol,
+ul,
+menu {
+    list-style: none outside none;
+}
+fieldset,
+iframe {
+    border: 0 none;
+}
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+}
+
+/* IE6 7 8(q) bug 显示为行内表现 */
+iframe {
+    display: block;
+}
+
+/* IE bug fixed: th 不继承 text-align */
+th {
+    text-align: inherit;
+}
+
+/* 修正表单元素不继承父级字体族的问题 */
+input,
+button,
+select,
+textarea {
+    font-family: Tahoma, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/**
+ * 移除 IE6-11 中默认的垂直滚动条
+ * 禁止水平拖动，防止破坏布局
+ */
+textarea {
+    @include resizable(vertical);
+}
+
+/* 一致的 del 样式 */
+del {
+    text-decoration: line-through;
+}
+
+abbr {
+    cursor: help;
+}
+
+
+/* 以下为排版样式 */
+
+hr {
+    height: 10px;
+    margin-bottom: .8em;
+    border: 0;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+blockquote {
+    position: relative;
+    padding: 0 15px;
+    margin: 15px 0;
+    border-left: 4px solid #ddd;
+    color: #999;
+}
+
